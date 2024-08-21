@@ -28,9 +28,6 @@
         <div class="col-6 d-flex nav-item-list">
             <ul class="navbar-nav d-flex flex-row align-items-center">
                 <!-- <li class="nav-item">
-                    <a class="nav-link" href="#">Work</a>
-                </li> -->
-                <!-- <li class="nav-item">
                     <a class="nav-link" href="/about">About</a>
                 </li> -->
                 <li class="nav-item contact-pill">
@@ -51,7 +48,7 @@
                     </span> mobile apps built<br> with expertise and care.
                 </h1>
                 <h3 class="intro-subtitle">
-                    Whether you’d like to improve an existing app or need something built from scratch.
+                    Reach out if you’d like to improve an existing app or need something built from scratch
                 </h3>
             </div>
         </div>
@@ -172,58 +169,22 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        /*const sizeIndicator = document.createElement('div');
-        sizeIndicator.classList.add('size-indicator');
-        document.body.appendChild(sizeIndicator);
-
-        function updateSizeClass() {
-            const width = window.innerWidth;
-
-            sizeIndicator.classList.remove('sm', 'md', 'lg', 'xl', 'xxl');
-
-            if (width < 576) {
-                sizeIndicator.classList.add('sm');
-            } else if (width >= 576 && width < 768) {
-                sizeIndicator.classList.add('md');
-            } else if (width >= 768 && width < 992) {
-                sizeIndicator.classList.add('lg');
-            } else if (width >= 992 && width < 1200) {
-                sizeIndicator.classList.add('xl');
-            } else {
-                sizeIndicator.classList.add('xxl');
-            }
-        }
-
-        updateSizeClass();
-        window.addEventListener('resize', updateSizeClass);
-
-        const gridContainer = document.querySelector('.circle-grid');
-        const rows = 6; // Number of rows
-        const columns = 150; // Number of columns
-
-        for (let i = 0; i < rows * columns; i++) {
-            const circle = document.createElement('div');
-            circle.className = 'circle';
-            gridContainer.appendChild(circle);
-        }
-    });*/
-
-    new TypeIt("#typewriter", {
-        speed: 90,
-        deleteSpeed: 80, 
-        loop: true,
-      })
-    .pause(3000)
-      .delete(12)
-      .type('Secure')
-      .pause(3000)
-      .delete(8)
-      .type('Exceptional')
-      .pause(3000)
-      .delete(15)
-      .type('Quality')
-      .pause(3000)
-      .delete()
-      .go();
-
+        new TypeIt("#typewriter", {
+            speed: 90,
+            deleteSpeed: 80, 
+            loop: true,
+        })
+        .pause(3000)
+        .delete(12)
+        .type('Secure')
+        .pause(3000)
+        .delete(8)
+        .type('Exceptional')
+        .pause(3000)
+        .delete(15)
+        .type('Quality')
+        .pause(3000)
+        .delete()
+        .go();
+    })
 </script>
