@@ -1,0 +1,580 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$enable-dark-mode: false;
+
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+$background: #0B1117;
+$secondary: #F19A49;
+$divider: #23303D;
+$primary-text: #ECEBEB;
+
+// Global
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background: $background;
+    color: $primary-text;
+    position: relative;
+}
+
+h1.intro {
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation: 1s cubic-bezier(0.8, 0, 0.13, 1) 0s 1 normal none running fade-up;
+}
+
+h3.intro-subtitle {
+    color: #D0C2C2;
+
+    @include media-breakpoint-down(md){
+       font-size: 16px;
+       margin-right: 8rem;
+    }
+}
+
+.footer-row {
+    padding: 6rem;
+    margin-bottom: 8rem;;
+    @include media-breakpoint-down(md){
+        padding: 2rem !important;
+        margin-bottom: 8rem;
+    }
+}
+
+.footer-wrapper {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.footer {
+    background-color: $background; 
+    color: $divider; /* Optional: Text color */
+    text-align: center; /* Center the text horizontally */
+    padding: 10px 0; /* Padding to add space around the text */
+    font-size: 14px;
+    border-top: 2px solid $divider;
+    z-index: 9999;
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+}
+
+.contact-pill {
+    border-radius: 40px;
+    background-color: #F19A49;
+    padding: 4px 16px 4px 16px;
+    color: $background;
+    font-weight: bolder;
+    justify-content: start;
+}
+
+.lets-talk-button {
+    margin-left: 0.5rem;
+    border-radius: 40px;
+    background-color: #F19A49;
+    padding: 12px 20px 12px 20px;
+    color: $background;
+    display: flex;
+    width: 214px; 
+    align-items: center;
+
+    @include media-breakpoint-down(md){
+        width: 200px;  
+    }
+}
+
+.lets-talk-button a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.send-icon {
+    width: 34px;
+    height: 34px;
+
+    @include media-breakpoint-down(md){
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.lets-talk-button h2 {
+    font-weight: bold !important;
+    font-size: 28px;
+    margin: 0;
+
+    @include media-breakpoint-down(md){
+        font-size: 20px;
+    }
+}
+
+.bottom-left-image, .bottom-right-image {
+    position: absolute; 
+    bottom: 0; /* Aligns to the bottom of the viewport */
+    width: 12%; /* The image will take up 100% of the container's width */
+    height: auto; /* Maintains the aspect ratio of the image */
+    bottom: -20px;
+    z-index: 1;
+
+    @include media-breakpoint-down(lg) {
+        width: 20%;
+    }
+}
+
+.bottom-left-image {
+    left: 0; /* Aligns to the left of the viewport */
+}
+
+.bottom-right-image {
+    right: 0; /* Aligns to the right of the viewport */
+}
+
+.footer-title h1  {
+    font-size: 60px;
+
+    @include media-breakpoint-down(md)
+    {
+        font-size: 28px;
+    }
+}
+
+.navbar {
+    border-bottom: 2px solid $divider;
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+
+    @include media-breakpoint-down(md){
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+.nav-item-list  {
+    justify-content: end;
+    align-items: center;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+
+    @include media-breakpoint-down(md){
+        size: 32px;
+        height: 32px;
+    }
+}
+
+.nav-title {
+    vertical-align: middle;
+    padding-left: 1rem;
+    font-size: 24px;
+
+    @include media-breakpoint-down(md){
+        font-size: 16px;
+        padding-left: 0.5rem;
+    }
+}
+
+.navbar-nav {
+    flex-direction: row;
+    list-style: none; /* Removes bullet points */
+    padding-left: 0; /* Removes default padding */
+    margin-bottom: 0; /* Removes default margin */
+}
+
+.nav-item {
+    margin-left: 2rem;
+    font-size: 24px;
+
+    @include media-breakpoint-down(md){
+        margin-left: 1rem;
+        font-size: 16px;
+    }
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.title-area {
+    position: relative;
+    padding-top: 12rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    margin-bottom: 28rem;
+
+    @include media-breakpoint-down(md){
+        padding-top: 4rem !important;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        margin-bottom: 14rem;
+    }
+}
+
+.title-area h1 {
+    font-size: 54px;
+
+    @include media-breakpoint-down(md){
+        font-size: 24px !important;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #84C3E7, #43F8D7); /* Gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blob {
+    position: absolute;
+    top: 60%;
+    left: 28%;
+    width: 600px;
+    height: 600px;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Place the blob behind the text */
+    opacity: 1.0; /* Optional: make the blob semi-transparent */
+
+    @include media-breakpoint-down(md){
+        top: 70%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.offscreen-circle {
+    position: absolute;
+    top: 50%;
+    right: -200px; /* Adjust this value to move the circle offscreen */
+    width: 400px;
+    height: 400px;
+    border: 8px solid $divider;
+    border-radius: 50%;
+
+
+    @include media-breakpoint-down(xl){
+        top: 85%;
+        right: -150px; /* Adjust this value to move the circle offscreen */
+        width: 300px;
+        height: 300px;
+        border: 8px solid $divider;
+    }
+
+    @include media-breakpoint-down(md){
+        top: 100% !important;
+        right: -75px !important; /* Adjust this value to move the circle offscreen */
+        width: 150px !important;
+        height: 150px !important;
+        border: 4px solid $divider;
+    }
+}
+
+.featured-area {
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 4rem;
+    border-top: 2px solid $divider;
+
+    @include media-breakpoint-down(md){
+        margin-bottom: 1rem;
+    }
+}
+
+.services-section {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    margin-bottom: 4rem;
+    justify-content: start;
+
+    @include media-breakpoint-down(md){
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        margin-bottom: 2rem;
+    }
+}
+
+.featured-area p {
+    font-size: 22px;
+    color: #9E9595;
+
+    @include media-breakpoint-down(md){
+        font-size: 12px;
+    }
+ }
+
+ .section-title  {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    justify-content: start;
+    text-align: start;
+
+    @include media-breakpoint-down(md){
+        padding-bottom: 1rem;
+        margin-left: 2rem !important;
+        margin-right: 2rem !important;
+    }
+ }
+
+ .section-title h1 {
+    font-size: 38px;
+
+    @include media-breakpoint-down(md){
+        font-size: 22px;
+    }
+ }
+
+.project-icon {
+    border-radius: 20px;
+    width: 256px;
+    height: 256px;
+    // margin-left: 4rem;
+    border: 6px solid $divider;
+
+    @include media-breakpoint-down(md) {
+        width: 128px;
+        height: 128px;
+        // margin-left: 2rem;
+        // margin-right: 2rem;
+    }
+}
+
+.project-icon:hover {
+    border: 6px solid #43F8D7;
+}
+
+.project-container {
+    margin-left: 6rem;
+    margin-right: 6rem;
+
+    @include media-breakpoint-down(md){
+        margin-left: 2rem !important;
+        margin-right: 2rem !important;
+        flex-wrap: wrap;
+    }
+}
+
+.project-cell {
+    justify-content: start;
+    vertical-align: top;
+    align-items: center;
+    padding-bottom: 4rem;
+
+    @include media-breakpoint-down(md) {
+        padding-bottom: 2rem;
+    }
+}
+
+.project-cell h1 {
+    font-size: 28px;
+    margin-left: 4rem;
+    @include media-breakpoint-down(md) {
+        font-size: 18px;
+        margin-left: 2rem;
+    }
+}
+
+.project-cell p {
+    margin-left: 4rem;
+    @include media-breakpoint-down(md) {
+        margin-left: 2rem;
+    }
+}
+
+.service-cell {
+    padding: 0;
+    justify-content: start;
+    align-items: center;
+}
+
+.service-text {
+    font-size: 24px;
+    border: 4px solid #23303D;
+    border-radius: 40px;
+    padding: 0.5rem 1.25rem;
+    list-style: none; 
+    text-align: center;
+    margin-left: 0.2rem;
+   //min-width: 300px;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-down(md){
+        font-size: 14px;
+        //max-width: 160px;
+        border: 3px solid #23303D;
+        padding: 0.25rem 0.25rem;
+       // margin-left: 0.1rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.circle-grid {
+    display: grid;
+    grid-template-columns: repeat(150, 8px); /* 50 columns, each 20px wide */
+    grid-template-rows: repeat(6, 8px); /* 10 rows, each 20px high */
+    gap: 4px; /* Adjust the spacing between circles */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    height: 40rem; /* Full viewport height */
+    padding-top: 24rem; /* Add padding if needed */
+
+    @include media-breakpoint-down(md){
+        height: 24rem; /* Full viewport height */
+        padding-top: 12rem; 
+    }
+}
+
+.circle {
+    width: 6px; /* Circle width */
+    height: 6px; /* Circle height */
+    background-color: $divider; /* Circle color */
+    border-radius: 50%; /* Make the div a circle */
+}
+
+// Top Margins
+
+.mt-1 {
+    margin-top: .75rem !important;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 1rem !important;
+    }
+}
+
+.mt-2 {
+    margin-top: 1.5rem !important;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 2rem !important;
+    }
+}
+
+.mt-3 {
+    margin-top: 2rem !important;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 3rem !important;
+    }
+}
+
+.mt-4 {
+    margin-top: 3rem !important;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 4rem !important;
+    }
+}
+
+.mt-6 {
+    margin-top: 4rem !important;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 5rem !important;
+    }
+}
+
+// Bottom Margins
+
+.mb-1 {
+    margin-bottom: .75rem !important;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 1rem !important;
+    }
+}
+
+.mb-2 {
+    margin-bottom: 1.5rem !important;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 2rem !important;
+    }
+}
+
+.mb-3 {
+    margin-bottom: 2rem !important;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 3rem !important;
+    }
+}
+
+.mb-4 {
+    margin-bottom: 3rem !important;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 4rem !important;
+    }
+}
+
+.mb-6 {
+    margin-bottom: 4rem !important;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 5rem !important;
+    }
+}
+
+//DEBUG
+
+/* Define the helper div for displaying the current size class */
+.size-indicator {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    z-index: 1000;
+    min-height: 50px;
+    min-width: 80px;
+}
+
+/* Define the media queries matching Bootstrap's breakpoints */
+.size-indicator.sm::after {
+    content: 'sm';
+}
+.size-indicator.md::after {
+    content: 'md';
+}
+.size-indicator.lg::after {
+    content: 'lg';
+}
+.size-indicator.xl::after {
+    content: 'xl';
+}
+.size-indicator.xxl::after {
+    content: 'xxl';
+}
